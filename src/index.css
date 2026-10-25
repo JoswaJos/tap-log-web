@@ -23,3 +23,22 @@ body {
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
 }
+
+@keyframes log-pulse {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(1.25); opacity: 0; }
+}
+
+@keyframes toast-in {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes sheet-in {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+}
